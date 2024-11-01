@@ -39,7 +39,7 @@ h2 {
     font-size: 2.5rem;
 }
 
-a {
+.tel {
     display: flex;
     flex-direction: row;
     align-items: bottom;
@@ -57,6 +57,14 @@ a {
     border-radius: 20px;
 }
 
+ul {
+    padding: 30px;
+}
+
+li {
+    list-style: none;
+}
+
 nav {
     position: fixed;
     left: 0px;
@@ -68,6 +76,12 @@ nav {
 
     padding: 20px;
     font-size: 1.5rem;
+}
+
+.intro {
+    color: var(--accent);
+    text-align: center;
+    padding: 50px;
 }
 
 .menuIcon {
@@ -145,27 +159,54 @@ nav {
 }
 
 .secondaryBanner div {
-    width: 100%;
+    padding: 20px;
+    padding-bottom: 0px;
     text-align: center;
+    width: 50%;
 }
 
 .secondaryBanner p {
-    width: 75%;
+    margin-bottom: 25px;
     text-align: center;
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 
 .secondaryBanner > div:first-child {
-    border-right: whitesmoke 5px solid;
+    border-right: whitesmoke 2px solid;
 }
 
 .contactBanner {
-    padding: 25px;
     background-color: var(--accent);
 
     text-align: center;
+
+    padding: 10px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+
+    justify-content: space-around;
+}
+
+.contact div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 5px;
+}
+
+.contact div a {
+    color: var(--bg);
+}
+
+.contact div svg {
+    margin: 10px
 }
 
 @media only screen and (max-width: 600px) {
@@ -177,12 +218,17 @@ nav {
         display: flex;
         flex-direction: column;
     
-        height: 50vw;
+        height: fit-content;
         color: whitesmoke;
+    }
+
+    .secondaryBanner div {
+        width: 90%;
+
     }
 
     .secondaryBanner > div:first-child {
         border-right: none;
-        border-bottom: whitesmoke 5px solid;
+        border-bottom: whitesmoke 2px solid;
     }
 }
